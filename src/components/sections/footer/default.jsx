@@ -13,7 +13,7 @@ export default function FooterSection({
 
   columns = [
     {
-      title: "Produc2",
+      title: "Product",
       links: [
         { text: "Changelog", href: "https://www.launchuicomponents.com/" },
         { text: "Documentation", href: "https://www.launchuicomponents.com/" },
