@@ -1,11 +1,11 @@
-
+const key = 're_jaYKHPwu_DauwPuWCLZfBn2qRjUj7nWQo'
 
 export async function POST() {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${import.meta.env.VITE_RESEND_API_KEY}`,
+      'Authorization': `Bearer ${key}`,
     },
     body: JSON.stringify({
       from: 'Acme <onboarding@resend.dev>',

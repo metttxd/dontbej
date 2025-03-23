@@ -13,16 +13,22 @@ import { BorderBeam } from '@/components/magicui/border-beam'
 import { AnimatedSubscribeButton } from '@/components/magicui/animated-subscribe-button'
 import { CheckIcon, ChevronRightIcon } from 'lucide-react'
 import axios from 'axios'
-import { POST } from '../../app/api/send/route'
+
 const Email = () => {
 
 const [email, setEmail] = React.useState('')
+const url = import.meta.env.VITE_STATUS === 'PROD' ? "https://www.dontbej.com/sendemail" : import.meta.env.VITE_URL;
 
 const sendEmail = async (e) => {
-    e.preventDefault()
-    console.log('works')
-    POST()
-}
+    e.preventDefault();
+    console.log("works");
+    try {
+        const response = await axios.post(`${url}/send-email`, { email });
+        console.log("Email inviata con successo:", response.data);
+    } catch (error) {
+        console.error("Errore nell'invio dell'email:", error.response ? error.response.data : error);
+    }
+};
 
     return (
         <div className='flex justify-center items-center h-[700px]'>
@@ -41,7 +47,7 @@ const sendEmail = async (e) => {
                         <div className="grid w-full items-center gap-4">
                             <div className="flex flex-col space-y-1.5">
 
-                                <Input id="name" placeholder="your@email.com" />
+                                <Input id="name" placeholder="your@email.com"  onChange={e => setEmail(e.target.value)} />
                             </div>
                             <div className="flex flex-col space-y-1.5">
 
@@ -52,7 +58,7 @@ const sendEmail = async (e) => {
                     </form>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                    <AnimatedSubscribeButton onClick={sendEmail} className="w-full">
+                    <AnimatedSubscribeButton onClick={sendEmail}  className="w-full">
                         <span className="group inline-flex items-center">
                             Follow
                             <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
