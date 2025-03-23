@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import WhoAreWe from './pages/WhoAreWe'
 import Navbar from './components/Navbar'
 import Footer from './components/sections/footer/default'
+import Email from './pages/Email'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/shop' element={<Shop />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/who-are-we' element={<WhoAreWe />} />
+        <Route path='/email' element={<Email />} />
       </Routes>   
       <Footer />
     </BrowserRouter>

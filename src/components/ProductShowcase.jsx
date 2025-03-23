@@ -10,6 +10,7 @@ import { SpinningText } from './magicui/spinning-text';
 import { VelocityScroll } from './magicui/scroll-based-velocity';
 import DBJlogo from './logos/DBJlogo';
 import { InteractiveHoverButton } from './magicui/interactive-hover-button';
+import { Link } from 'react-router-dom';
 const ProductShowcase = () => {
 
   return (
@@ -25,7 +26,7 @@ const ProductShowcase = () => {
           <p className={'italic text-5xl text-gray-950'}>dontbejealous</p>
 
         </div>
-        <InteractiveHoverButton className={'w-full mb-10  cursor-pointer'}>Get notified!</InteractiveHoverButton>
+        <Link to={'/email'}><InteractiveHoverButton className={'w-full mb-10  cursor-pointer'}>Get notified!</InteractiveHoverButton></Link>
       </div>
 
 
