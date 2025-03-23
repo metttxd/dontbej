@@ -1,4 +1,3 @@
-import { ModeToggle } from "../../ui/mode-toggle";
 import {
   Footer,
   FooterColumn,
@@ -8,15 +7,17 @@ import {
 import DBJlogo from "../../logos/DBJlogo";
 
 export default function FooterSection({
-  logo = <DBJlogo />,
+  logo = <DBJlogo className={'text-white'}/>,
   name = "dontbejealous",
+
+  year = new Date().getFullYear(),
 
   columns = [
     {
-      title: "Product",
+      title: "Products",
       links: [
-        { text: "Changelog", href: "https://www.launchuicomponents.com/" },
-        { text: "Documentation", href: "https://www.launchuicomponents.com/" },
+        { text: "Changelog", href: "https://www.dontbej.com/products" },
+        { text: "Shop", href: "https://www.www.dontbej.coom/shop" },
       ],
     },
     {
@@ -24,62 +25,37 @@ export default function FooterSection({
       links: [
         { text: "About", href: "https://www.launchuicomponents.com/" },
         { text: "Careers", href: "https://www.launchuicomponents.com/" },
-        { text: "Blog", href: "https://www.launchuicomponents.com/" },
       ],
     },
     {
       title: "Contact",
       links: [
-        { text: "Discord", href: "https://www.launchuicomponents.com/" },
-        { text: "Twitter", href: "https://www.launchuicomponents.com/" },
-        { text: "Github", href: "https://www.launchuicomponents.com/" },
+        { text: "Instagram", href: "https://www.instagram.com/dontbej/" },
+        { text: "Twitter", href: "https://www.x.com/dontbej/" }
       ],
     },
   ],
 
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
+  copyright = `© ${year} dontbejealous. All rights reserved`,
 
-  policies = [
-    { text: "Privacy Policy", href: "https://www.launchuicomponents.com/" },
-    { text: "Terms of Service", href: "https://www.launchuicomponents.com/" },
-  ],
+
 
   showModeToggle = true
 }) {
   return (
-    (<footer className="bg-background w-full px-4">
-      <div className="max-w-container mx-auto">
-        <Footer>
-          <FooterContent>
+    (<footer className="w-full bg-gray-950 text-white">
+      <div className="w-full px-4">
+        <Footer className={'bg-gray-950  flex justify-center flex-col'}>
+          <FooterContent className={'flex justify-center'}>
             <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
               <div className="flex items-center gap-2 flex-col">
                 {logo}
-                <h3 className="text-xl font-bold">{name}</h3>
+                <h3 className="text-xl font-bold text-white italic">{name}</h3>
               </div>
             </FooterColumn>
-            {columns.map((column, index) => (
-              <FooterColumn key={index}>
-                <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
-                {column.links.map((link, linkIndex) => (
-                  <a
-                    key={linkIndex}
-                    href={link.href}
-                    className="text-muted-foreground text-sm">
-                    {link.text}
-                  </a>
-                ))}
-              </FooterColumn>
-            ))}
           </FooterContent>
           <FooterBottom>
-            <div>{copyright}</div>
-            <div className="flex items-center gap-4">
-              {policies.map((policy, index) => (
-                <a key={index} href={policy.href}>
-                  {policy.text}
-                </a>
-              ))}
-            </div>
+            <div className="flex justify-center w-full text-white">{copyright}</div>
           </FooterBottom>
         </Footer>
       </div>

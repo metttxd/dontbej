@@ -37,6 +37,7 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --color-bg: oklch(12.96% 0.0274 261.69);
 }
 
 .dark {
@@ -109,6 +110,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+
+  --ease-in-out-cubic-1: cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 @layer base {
