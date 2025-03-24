@@ -19,7 +19,7 @@ function App() {
         <Route path='/who-are-we' element={<WhoAreWe />} />
         <Route path='/email' element={<Email />} />
       </Routes>   
-      <Footer />
+      <Footer/>
     </BrowserRouter>
     </>
   )

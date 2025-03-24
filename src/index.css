@@ -128,3 +128,17 @@
   font-family: Poppins;
   font-weight: 600;
 }
+@keyframes meteor {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, calc(100% + 50px)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-meteor {
+  animation: meteor var(--animation-duration) var(--animation-delay) linear;
+}

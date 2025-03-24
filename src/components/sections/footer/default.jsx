@@ -43,7 +43,7 @@ export default function FooterSection({
   showModeToggle = true
 }) {
   return (
-    (<footer className="w-full bg-gray-950 text-white">
+    (<footer className="w-full bg-gray-950 text-white z-30">
       <div className="w-full px-4">
         <Footer className={'bg-gray-950  flex justify-center flex-col'}>
           <FooterContent className={'flex justify-center'}>
