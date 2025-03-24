@@ -22,7 +22,7 @@ const ProductShowcase = () => {
 
       <div className='flex justify-center items-center flex-col'>
         <div className='flex justify-center items-center flex-col hover:scale-120 duration-500 --ease-in-expo transition-all my-10 mt-30 gap-30 '>
-          <DBJlogo className={'scale-500 hover:rotate-360 transition-all ease-[var(--ease-in-out-cubic-1)] text-gray-950'}  />
+          <DBJlogo className={'scale-500  transition-all ease-[var(--ease-in-out-cubic-1)] text-gray-950 hover:text-red-800'}  />
           <p className={'italic text-5xl text-gray-950'}>dontbejealous</p>
 
         </div>
