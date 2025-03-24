@@ -17,7 +17,7 @@ import axios from 'axios'
 const Email = () => {
 
 const [email, setEmail] = React.useState('')
-const url = import.meta.env.VITE_STATUS === 'PROD' ? "https://www.dontbej.com/sendemail" : import.meta.env.VITE_URL;
+const url = import.meta.env.VITE_STATUS === 'PROD' ? import.meta.env.VITE_BACKEND_URL : import.meta.env.VITE_URL;
 
 const sendEmail = async (e) => {
     e.preventDefault();
