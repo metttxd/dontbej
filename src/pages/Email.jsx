@@ -23,7 +23,7 @@ const Email = () => {
 
     const sendEmail = async (e) => {
         if (email.trim() === '') {
-            
+            setEmailSent(false)
             return;
         };
         console.log("works");
