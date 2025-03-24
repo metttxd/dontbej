@@ -4,7 +4,7 @@ import logo from '../assets/logo.svg'
 import { ShoppingCart } from 'lucide-react'
 import DBJlogo from './logos/DBJlogo'
 import {Mail} from 'lucide-react'
-
+import { HyperText } from './magicui/hyper-text'
 
 
 const Navbar = () => {
@@ -18,11 +18,11 @@ const Navbar = () => {
                                                 <p className='italic'>donbtjealous</p>
                                         </div>
                                 </Link>
-                                <div className='flex gap-5 whitespace-nowrap text-gray-950 transition-all'>
-                                        <Link to={'/'} className=" cursor-pointer font-bold hover:text-white transition-all">may 2025</Link>
+                                <div className='flex gap-5 whitespace-nowrap text-gray-950 transition-all '>
+                                        <Link to={'/'} className=" cursor-pointer font-bold hover:text-white transition-all"><HyperText animateOnHover={true} duration={1500} delay={1000} >may 2025</HyperText></Link>
                                 </div>
-                                <div>
-                                        <Mail className='w-25 cursor-pointer transition-all text-gray-950 hover:text-white' />
+                                <div className='hidden sm:block'>
+                                        <Link  to={'/email'}><Mail className='w-25 cursor-pointer transition-all text-gray-950 hover:text-white left-0' /></Link>
                                 </div>
                         </div>
 
