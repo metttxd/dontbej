@@ -21,18 +21,19 @@ const Email = () => {
     const url = import.meta.env.VITE_STATUS === 'PROD' ? import.meta.env.VITE_BACKEND_URL : import.meta.env.VITE_URL;
     const [emailSent, setEmailSent] = React.useState(false);
 
-    const sendEmail = async (e) => {
+    const sendEmail = async () => {
         if (email.trim() === '') {
-            setEmailSent(false)
+            setEmailSent(false);
             return;
-        };
+        }
         console.log("works");
         try {
-            const response = await axios.post(`${url}/send-email`, { email });
+            await axios.post(`${url}/send-email`, { email });
             console.log("Email inviata con successo:");
-            setEmailSent(true)
+            setEmailSent(true);
         } catch (error) {
             console.error("Errore nell'invio dell'email:");
+            setEmailSent(false);
         }
     };
 
