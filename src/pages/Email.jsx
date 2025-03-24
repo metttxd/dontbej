@@ -17,14 +17,14 @@ import axios from 'axios'
 const Email = () => {
 
 const [email, setEmail] = React.useState('')
-const url = import.meta.env.STATUS === 'PROD' ? import.meta.env.BACKEND_URL : import.meta.env.URL;
-const url1 = import.meta.env.URL1;
+const url = import.meta.env.VITE_STATUS === 'PROD' ? import.meta.env.VITE_BACKEND_URL : import.meta.env.VITE_URL;
+const url1 = import.meta.env.VITE_URL1;
 
 const sendEmail = async (e) => {
     e.preventDefault();
     console.log("works");
     try {
-        const response = await axios.post(`${url}${url1}`, { email });
+        const response = await axios.post(`${url}${url}`, { email });
         console.log("Email inviata con successo:");
     } catch (error) {
         console.error("Errore nell'invio dell'email:");
