@@ -27,10 +27,11 @@ const Email = () => {
             return;
         }
         console.log("works");
+        setEmailSent(true);
         try {
             await axios.post(`${url}/send-email`, { email });
             console.log("Email inviata con successo:");
-            setEmailSent(true);
+            
         } catch (error) {
             console.error("Errore nell'invio dell'email:");
             setEmailSent(false);
