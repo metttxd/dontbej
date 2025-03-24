@@ -34,7 +34,7 @@ function ParallaxText({ children, baseVelocity = 100, ...props }) {
 
   useAnimationFrame((t, delta) => {
     const moveBy = baseVelocity * (delta / 1000);
-    baseX.set(baseX.get() + moveBy);
+    baseX.set(baseX.get() - moveBy);
     x.set(`${wrap(-100 / repetitions, 0, baseX.get())}%`);
   });
 
