@@ -24,9 +24,9 @@ const sendEmail = async (e) => {
     console.log("works");
     try {
         const response = await axios.post(`${url}/send-email`, { email });
-        console.log("Email inviata con successo:", response.data);
+        console.log("Email inviata con successo:");
     } catch (error) {
-        console.error("Errore nell'invio dell'email:", error.response ? error.response.data : error);
+        console.error("Errore nell'invio dell'email:");
     }
 };
 
