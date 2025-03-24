@@ -11,7 +11,7 @@ const Navbar = () => {
         return (
 
                 <>
-                        <div className='flex h-[10vh] justify-between items-center bg-red-800 gap-5 p-7 '>
+                        <div className='flex h-[14vh] sm:h-[10vh] justify-between items-center bg-red-800 gap-5 p-7 '>
                                 <Link to={'/'}>
                                         <div className='flex justify-center flex-col items-center text-black hover:text-white cursor-pointer'>
                                                 <DBJlogo />
