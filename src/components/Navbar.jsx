@@ -15,7 +15,7 @@ const Navbar = () => {
                                 <Link to={'/'}>
                                         <div className='flex justify-center flex-col items-center text-black hover:text-white cursor-pointer'>
                                                 <DBJlogo />
-                                                <p className='italic'>donbtjealous</p>
+                                                <p className='italic'>dontbejealous</p>
                                         </div>
                                 </Link>
                                 <div className='flex gap-5 whitespace-nowrap text-gray-950 transition-all '>
